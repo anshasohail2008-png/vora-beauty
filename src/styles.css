@@ -142,3 +142,92 @@
     color: var(--color-foreground);
   }
 }
+
+/* ===== VIORA Cosmetics brand layer ===== */
+@theme inline {
+  --color-blush: var(--blush);
+  --color-blush-foreground: var(--blush-foreground);
+  --color-rose-gold: var(--rose-gold);
+  --color-rose-gold-soft: var(--rose-gold-soft);
+  --color-cream: var(--cream);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1.25rem;
+  --background: oklch(0.985 0.011 65);          /* #FFF8F2 beige */
+  --foreground: oklch(0.371 0 0);               /* #333333 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.371 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.371 0 0);
+  --primary: oklch(0.752 0.072 65);             /* #D4A373 rose gold */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.912 0.043 344);          /* #F8D7E8 soft pink */
+  --secondary-foreground: oklch(0.371 0 0);
+  --muted: oklch(0.965 0.014 60);
+  --muted-foreground: oklch(0.556 0.012 40);
+  --accent: oklch(0.912 0.043 344);
+  --accent-foreground: oklch(0.371 0 0);
+  --destructive: oklch(0.62 0.19 20);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.912 0.02 60);
+  --input: oklch(0.912 0.02 60);
+  --ring: oklch(0.752 0.072 65);
+  --blush: oklch(0.912 0.043 344);
+  --blush-foreground: oklch(0.371 0 0);
+  --rose-gold: oklch(0.752 0.072 65);
+  --rose-gold-soft: oklch(0.86 0.045 68);
+  --cream: oklch(1 0 0);
+  --gradient-rose: linear-gradient(135deg, oklch(0.665 0.082 62), oklch(0.7 0.075 348));
+  --gradient-veil: linear-gradient(180deg, oklch(0.985 0.011 65), oklch(0.955 0.03 344));
+  --shadow-soft: 0 18px 50px -22px oklch(0.6 0.06 40 / 0.35);
+  --shadow-lift: 0 30px 70px -28px oklch(0.6 0.08 40 / 0.5);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@utility glass-card {
+  background: color-mix(in oklab, var(--cream) 65%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid color-mix(in oklab, var(--rose-gold) 25%, transparent);
+  box-shadow: var(--shadow-soft);
+}
+
+@utility text-gradient-rose {
+  background: var(--gradient-rose);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  &[data-visible="true"] {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes viora-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@utility animate-float {
+  animation: viora-float 7s ease-in-out infinite;
+}
