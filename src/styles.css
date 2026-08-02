@@ -180,7 +180,7 @@
   --rose-gold: oklch(0.752 0.072 65);
   --rose-gold-soft: oklch(0.86 0.045 68);
   --cream: oklch(1 0 0);
-  --gradient-rose: linear-gradient(135deg, oklch(0.752 0.072 65), oklch(0.87 0.05 340));
+  --gradient-rose: linear-gradient(135deg, oklch(0.665 0.082 62), oklch(0.7 0.075 348));
   --gradient-veil: linear-gradient(180deg, oklch(0.985 0.011 65), oklch(0.955 0.03 344));
   --shadow-soft: 0 18px 50px -22px oklch(0.6 0.06 40 / 0.35);
   --shadow-lift: 0 30px 70px -28px oklch(0.6 0.08 40 / 0.5);
