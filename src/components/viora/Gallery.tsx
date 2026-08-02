@@ -12,7 +12,7 @@ const items = [
   { src: cleanser, label: "Hydrating Cleanser", span: "" },
   { src: packaging, label: "Luxury Packaging", span: "sm:col-span-2" },
   { src: powder, label: "Face Powder", span: "" },
-  { src: mascara, label: "Waterproof Mascara", span: "" },
+  { src: mascara, label: "Waterproof Mascara", span: "sm:col-span-2" },
 ];
 
 export function Gallery() {
