@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Heart, Menu, Search, ShoppingBag, User, X } from "lucide-react";
+import { Heart, Search, ShoppingBag, User } from "lucide-react";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -17,7 +17,6 @@ export function Header({
   wishlistCount: number;
 }) {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -32,22 +31,25 @@ export function Header({
         scrolled ? "glass-card rounded-none py-2" : "bg-transparent py-4"
       }`}
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-4 sm:px-6 lg:grid-cols-[auto_minmax(0,1fr)_auto]">
-        <a href="#home" className="flex min-w-0 items-center gap-2">
+      <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 sm:gap-3 sm:px-6 lg:gap-4">
+        <a href="#home" className="flex shrink-0 items-center gap-2">
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary font-display text-lg text-primary-foreground">
             V
           </span>
-          <span className="truncate font-display text-2xl tracking-[0.28em] text-foreground">
+          <span className="font-display text-xl tracking-[0.28em] text-foreground sm:text-2xl">
             VIORA
           </span>
         </a>
 
-        <nav className="hidden items-center justify-center gap-8 lg:flex">
+        <nav
+          className="flex flex-1 items-center justify-center gap-3 overflow-x-auto px-2 py-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-5 lg:gap-8"
+          aria-label="Main navigation"
+        >
           {links.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="relative text-sm uppercase tracking-[0.18em] text-foreground/80 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:text-primary hover:after:origin-left hover:after:scale-x-100"
+              className="relative whitespace-nowrap text-xs uppercase tracking-[0.18em] text-foreground/80 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:text-primary hover:after:origin-left hover:after:scale-x-100 sm:text-sm"
             >
               {link.label}
             </a>
@@ -65,6 +67,14 @@ export function Header({
             />
           </label>
 
+          <button
+            type="button"
+            aria-label="Search"
+            className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border/80 bg-card/70 text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary md:hidden"
+          >
+            <Search className="h-4 w-4" aria-hidden />
+          </button>
+
           <IconButton label="Wishlist" count={wishlistCount}>
             <Heart className="h-5 w-5" aria-hidden />
           </IconButton>
@@ -74,32 +84,8 @@ export function Header({
           <IconButton label="User profile">
             <User className="h-5 w-5" aria-hidden />
           </IconButton>
-
-          <button
-            type="button"
-            aria-label="Toggle menu"
-            onClick={() => setOpen((v) => !v)}
-            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-border/80 bg-card/70 text-foreground lg:hidden"
-          >
-            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-          </button>
         </div>
       </div>
-
-      {open && (
-        <nav className="mx-4 mt-3 grid gap-1 rounded-2xl border border-border bg-card p-3 shadow-[var(--shadow-soft)] lg:hidden">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="rounded-xl px-4 py-3 text-sm uppercase tracking-[0.18em] text-foreground/80 transition-colors hover:bg-secondary/60 hover:text-primary"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }
@@ -117,7 +103,7 @@ function IconButton({
     <button
       type="button"
       aria-label={label}
-      className="relative grid h-10 w-10 shrink-0 place-items-center rounded-full border border-border/80 bg-card/70 text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary"
+      className="relative grid h-9 w-9 shrink-0 place-items-center rounded-full border border-border/80 bg-card/70 text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary hover:text-primary sm:h-10 sm:w-10"
     >
       {children}
       {count ? (
