@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { Header } from "@/components/viora/Header";
 import { Hero } from "@/components/viora/Hero";
 import { Products } from "@/components/viora/Products";
@@ -29,22 +28,12 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const [wishlist, setWishlist] = useState<string[]>([]);
-  const [cart, setCart] = useState<string[]>([]);
-
-  const toggleWishlist = (id: string) =>
-    setWishlist((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
-
   return (
     <div className="min-h-screen bg-background">
-      <Header cartCount={cart.length} wishlistCount={wishlist.length} />
+      <Header />
       <main>
         <Hero />
-        <Products
-          wishlist={wishlist}
-          onToggleWishlist={toggleWishlist}
-          onAddToCart={(id) => setCart((prev) => [...prev, id])}
-        />
+        <Products />
         <Features />
         <Reviews />
         <Gallery />
