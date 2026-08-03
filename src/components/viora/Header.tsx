@@ -1,21 +1,18 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Heart, Search, ShoppingBag, User } from "lucide-react";
+import { useShop } from "@/lib/shop-store";
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "Shop", href: "#shop" },
-  { label: "Products", href: "#products" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", hash: "home" },
+  { label: "Shop", hash: "shop" },
+  { label: "Products", hash: "products" },
+  { label: "About", hash: "about" },
+  { label: "Contact", hash: "contact" },
 ];
 
-export function Header({
-  cartCount,
-  wishlistCount,
-}: {
-  cartCount: number;
-  wishlistCount: number;
-}) {
+export function Header() {
+  const { cart, wishlist } = useShop();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -32,27 +29,28 @@ export function Header({
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 sm:gap-3 sm:px-6 lg:gap-4">
-        <a href="#home" className="flex shrink-0 items-center gap-2">
+        <Link to="/" className="flex shrink-0 items-center gap-2">
           <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary font-display text-lg text-primary-foreground">
             V
           </span>
           <span className="font-display text-xl tracking-[0.28em] text-foreground sm:text-2xl">
             VIORA
           </span>
-        </a>
+        </Link>
 
         <nav
           className="flex flex-1 items-center justify-center gap-3 overflow-x-auto px-2 py-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-5 lg:gap-8"
           aria-label="Main navigation"
         >
           {links.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to="/"
+              hash={link.hash}
               className="relative whitespace-nowrap text-xs uppercase tracking-[0.18em] text-foreground/80 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:text-primary hover:after:origin-left hover:after:scale-x-100 sm:text-sm"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -75,10 +73,10 @@ export function Header({
             <Search className="h-4 w-4" aria-hidden />
           </button>
 
-          <IconButton label="Wishlist" count={wishlistCount}>
+          <IconButton label="Wishlist" count={wishlist.length}>
             <Heart className="h-5 w-5" aria-hidden />
           </IconButton>
-          <IconButton label="Shopping cart" count={cartCount}>
+          <IconButton label="Shopping cart" count={cart.length}>
             <ShoppingBag className="h-5 w-5" aria-hidden />
           </IconButton>
           <IconButton label="User profile">
