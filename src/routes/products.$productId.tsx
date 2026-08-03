@@ -110,7 +110,7 @@ function ProductDetail() {
             </div>
 
             <ul className="mt-7 grid gap-3">
-              {product.highlights.map((item) => (
+              {product.highlights.map((item: string) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-foreground/80">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden />
                   {item}
