@@ -1,73 +1,12 @@
 import { Heart, ShoppingBag, Star } from "lucide-react";
-import serum from "@/assets/product-serum.jpg";
-import cleanser from "@/assets/product-cleanser.jpg";
-import powder from "@/assets/product-powder.jpg";
-import mascara from "@/assets/product-mascara.jpg";
+import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
+import { products } from "@/lib/products";
+import { useShop } from "@/lib/shop-store";
 
-export type Product = {
-  id: string;
-  name: string;
-  image: string;
-  description: string;
-  benefits: string;
-  oldPrice: string;
-  newPrice: string;
-  badge: string;
-};
+export function Products() {
+  const { wishlist, toggleWishlist, addToCart } = useShop();
 
-export const products: Product[] = [
-  {
-    id: "serum",
-    name: "Vitamin C Face Serum",
-    image: serum,
-    description: "A weightless glow elixir with 15% stabilised vitamin C.",
-    benefits: "Brightens dull skin · Fades dark spots · Boosts collagen",
-    oldPrice: "$68.00",
-    newPrice: "$49.00",
-    badge: "-28% Sale",
-  },
-  {
-    id: "cleanser",
-    name: "Hydrating Face Cleanser",
-    image: cleanser,
-    description: "A silky cream-to-foam cleanse with hyaluronic acid.",
-    benefits: "Removes impurities · Never strips · pH balanced",
-    oldPrice: "$42.00",
-    newPrice: "$32.00",
-    badge: "-24% Sale",
-  },
-  {
-    id: "powder",
-    name: "Brightening Face Powder",
-    image: powder,
-    description: "Air-spun translucent powder for a soft-focus finish.",
-    benefits: "Blurs pores · Controls shine · 12h wear",
-    oldPrice: "$55.00",
-    newPrice: "$39.00",
-    badge: "Bestseller",
-  },
-  {
-    id: "mascara",
-    name: "Waterproof Mascara",
-    image: mascara,
-    description: "Buildable volume that holds its curl through anything.",
-    benefits: "Waterproof · Smudge-proof · Lash conditioning",
-    oldPrice: "$36.00",
-    newPrice: "$26.00",
-    badge: "New In",
-  },
-];
-
-export function Products({
-  wishlist,
-  onToggleWishlist,
-  onAddToCart,
-}: {
-  wishlist: string[];
-  onToggleWishlist: (id: string) => void;
-  onAddToCart: (id: string) => void;
-}) {
   return (
     <section id="products" className="relative py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -88,20 +27,27 @@ export function Products({
               <Reveal key={product.id} delay={i * 110}>
                 <article className="glass-card group flex h-full flex-col overflow-hidden rounded-[1.75rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-lift)]">
                   <div className="relative overflow-hidden bg-secondary/40">
-                    <img
-                      src={product.image}
-                      alt={`VIORA ${product.name}`}
-                      loading="lazy"
-                      width={912}
-                      height={912}
-                      className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
+                    <Link
+                      to="/products/$productId"
+                      params={{ productId: product.id }}
+                      aria-label={`View ${product.name} details`}
+                      className="block"
+                    >
+                      <img
+                        src={product.image}
+                        alt={`VIORA ${product.name}`}
+                        loading="lazy"
+                        width={912}
+                        height={912}
+                        className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                    </Link>
                     <span className="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary-foreground">
                       {product.badge}
                     </span>
                     <button
                       type="button"
-                      onClick={() => onToggleWishlist(product.id)}
+                      onClick={() => toggleWishlist(product.id)}
                       aria-label={`${liked ? "Remove" : "Add"} ${product.name} ${liked ? "from" : "to"} wishlist`}
                       aria-pressed={liked}
                       className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full border border-border/70 bg-card/80 text-foreground transition-all duration-300 hover:scale-110 hover:text-primary"
@@ -113,7 +59,13 @@ export function Products({
                   <div className="flex flex-1 flex-col p-6">
                     <p className="text-[10px] uppercase tracking-[0.32em] text-primary">VIORA</p>
                     <h3 className="mt-2 font-display text-2xl leading-snug text-foreground">
-                      {product.name}
+                      <Link
+                        to="/products/$productId"
+                        params={{ productId: product.id }}
+                        className="transition-colors hover:text-primary"
+                      >
+                        {product.name}
+                      </Link>
                     </h3>
                     <div className="mt-2 flex items-center gap-2">
                       <span className="flex text-primary" aria-hidden>
@@ -140,20 +92,20 @@ export function Products({
                     <div className="mt-6 grid gap-2">
                       <button
                         type="button"
-                        onClick={() => onAddToCart(product.id)}
+                        onClick={() => addToCart(product.id)}
                         className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/50 px-5 py-3 text-xs uppercase tracking-[0.18em] text-foreground transition-colors hover:bg-secondary/60 hover:text-primary"
                       >
                         <ShoppingBag className="h-4 w-4" aria-hidden />
                         Add to Cart
                       </button>
-                      <button
-                        type="button"
-                        onClick={() => onAddToCart(product.id)}
-                        className="rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:-translate-y-0.5"
+                      <Link
+                        to="/products/$productId"
+                        params={{ productId: product.id }}
+                        className="rounded-full px-5 py-3 text-center text-xs uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:-translate-y-0.5"
                         style={{ background: "var(--gradient-rose)" }}
                       >
-                        Buy Now
-                      </button>
+                        View Details
+                      </Link>
                     </div>
                   </div>
                 </article>
