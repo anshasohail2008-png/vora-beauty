@@ -109,6 +109,25 @@ function ProductDetail() {
               </span>
             </div>
 
+            {product.shades && (
+              <div className="mt-7">
+                <p className="text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+                  Available shades
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {product.shades.map((shade: string) => (
+                    <span
+                      key={shade}
+                      className="rounded-full border border-border/70 bg-card/60 px-4 py-2 text-[11px] uppercase tracking-[0.14em] text-foreground/80"
+                    >
+                      {shade}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+
             <ul className="mt-7 grid gap-3">
               {product.highlights.map((item: string) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-foreground/80">
