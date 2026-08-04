@@ -13,7 +13,7 @@ export function Products() {
         <Reveal className="text-center">
           <p className="text-xs uppercase tracking-[0.32em] text-primary">Featured Products</p>
           <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl leading-tight text-foreground sm:text-5xl">
-            The VIORA edit, loved worldwide
+            The VORA edit, loved worldwide
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm text-muted-foreground sm:text-base">
             Clean formulas, clinically proven actives, and packaging worthy of your vanity.
@@ -35,7 +35,7 @@ export function Products() {
                     >
                       <img
                         src={product.image}
-                        alt={`VIORA ${product.name}`}
+                        alt={`VORA ${product.name}`}
                         loading="lazy"
                         width={912}
                         height={912}
@@ -57,7 +57,7 @@ export function Products() {
                   </div>
 
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="text-[10px] uppercase tracking-[0.32em] text-primary">VIORA</p>
+                    <p className="text-[10px] uppercase tracking-[0.32em] text-primary">VORA</p>
                     <h3 className="mt-2 font-display text-2xl leading-snug text-foreground">
                       <Link
                         to="/products/$productId"

@@ -21,7 +21,7 @@ const reviews = [
     role: "Verified buyer · Tokyo",
     photo:
       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=80",
-    text: "The mascara held its curl through a 12-hour flight. VIORA packaging alone makes it feel like a gift to myself.",
+    text: "The mascara held its curl through a 12-hour flight. VORA packaging alone makes it feel like a gift to myself.",
   },
 ];
 

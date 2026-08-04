@@ -16,13 +16,13 @@ export const Route = createFileRoute("/products/$productId")({
     if (!loaderData) {
       return {
         meta: [
-          { title: "Product not found — VIORA Cosmetics" },
+          { title: "Product not found — VORA Cosmetics" },
           { name: "robots", content: "noindex" },
         ],
       };
     }
     const { product } = loaderData;
-    const title = `${product.name} — VIORA Cosmetics`;
+    const title = `${product.name} — VORA Cosmetics`;
     const description = `${product.description} ${product.benefits}. Now ${product.newPrice}.`;
     return {
       meta: [
@@ -72,7 +72,7 @@ function ProductDetail() {
           <div className="glass-card relative overflow-hidden rounded-[2rem] bg-secondary/40">
             <img
               src={product.image}
-              alt={`VIORA ${product.name}`}
+              alt={`VORA ${product.name}`}
               width={912}
               height={912}
               className="aspect-square w-full object-cover"
@@ -189,7 +189,7 @@ function ProductDetail() {
               >
                 <img
                   src={item.image}
-                  alt={`VIORA ${item.name}`}
+                  alt={`VORA ${item.name}`}
                   loading="lazy"
                   width={912}
                   height={912}
@@ -223,7 +223,7 @@ function ProductDetail() {
             "@context": "https://schema.org",
             "@type": "Product",
             name: product.name,
-            brand: { "@type": "Brand", name: "VIORA Cosmetics" },
+            brand: { "@type": "Brand", name: "VORA Cosmetics" },
             description: product.longDescription,
             offers: {
               "@type": "Offer",

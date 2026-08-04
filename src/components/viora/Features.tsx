@@ -29,7 +29,7 @@ export function Features() {
     <section id="about" className="relative overflow-hidden py-24" style={{ background: "var(--gradient-veil)" }}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <Reveal className="text-center">
-          <p className="text-xs uppercase tracking-[0.32em] text-primary">Why Choose VIORA</p>
+          <p className="text-xs uppercase tracking-[0.32em] text-primary">Why Choose VORA</p>
           <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl leading-tight text-foreground sm:text-5xl">
             Luxury you can feel on your skin
           </h2>
