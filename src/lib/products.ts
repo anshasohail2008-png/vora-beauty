@@ -2,6 +2,11 @@ import serum from "@/assets/product-serum.jpg";
 import cleanser from "@/assets/product-cleanser.jpg";
 import powder from "@/assets/product-powder.jpg";
 import mascara from "@/assets/product-mascara.jpg";
+import highlighter from "@/assets/product-highlighter.jpg";
+import lipstick from "@/assets/product-lipstick.jpg";
+import eyeliner from "@/assets/product-eyeliner.jpg";
+import lipgloss from "@/assets/product-lipgloss.jpg";
+import foundation from "@/assets/product-foundation.jpg";
 
 export type Product = {
   id: string;
@@ -18,7 +23,9 @@ export type Product = {
   highlights: string[];
   ingredients: string;
   howToUse: string;
+  shades?: string[];
 };
+
 
 export const products: Product[] = [
   {
