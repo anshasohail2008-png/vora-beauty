@@ -115,7 +115,7 @@ function ProductDetail() {
                   Available shades
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {product.shades.map((shade) => (
+                  {product.shades.map((shade: string) => (
                     <span
                       key={shade}
                       className="rounded-full border border-border/70 bg-card/60 px-4 py-2 text-[11px] uppercase tracking-[0.14em] text-foreground/80"
