@@ -34,7 +34,7 @@ export function Header() {
             V
           </span>
           <span className="font-display text-xl tracking-[0.28em] text-foreground sm:text-2xl">
-            VIORA
+            VORA
           </span>
         </Link>
 

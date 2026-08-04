@@ -32,7 +32,7 @@ export function Footer() {
               <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary font-display text-lg text-primary-foreground">
                 V
               </span>
-              <span className="font-display text-2xl tracking-[0.28em] text-foreground">VIORA</span>
+              <span className="font-display text-2xl tracking-[0.28em] text-foreground">VORA</span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Premium skincare and beauty crafted to reveal your natural glow — clean,
@@ -77,7 +77,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center gap-6 border-t border-border/70 py-8 sm:flex-row sm:justify-between">
           <p className="text-xs text-muted-foreground">
-            © 2026 VIORA Cosmetics. All Rights Reserved.
+            © 2026 VORA Cosmetics. All Rights Reserved.
           </p>
           <ul className="flex items-center gap-3">
             {socials.map((s) => (

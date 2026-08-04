@@ -21,7 +21,7 @@ export function Newsletter() {
               Newsletter
             </span>
             <h2 className="relative mt-6 font-display text-4xl leading-tight text-foreground sm:text-5xl">
-              Join the VIORA Beauty Club
+              Join the VORA Beauty Club
             </h2>
             <p className="relative mx-auto mt-4 max-w-xl text-sm text-muted-foreground sm:text-base">
               Early access to launches, expert rituals, and 10% off your first order.

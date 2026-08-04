@@ -22,7 +22,7 @@ export function Gallery() {
         <Reveal className="text-center">
           <p className="text-xs uppercase tracking-[0.32em] text-primary">Beauty Gallery</p>
           <h2 className="mx-auto mt-4 max-w-2xl font-display text-4xl leading-tight text-foreground sm:text-5xl">
-            Inside the VIORA world
+            Inside the VORA world
           </h2>
         </Reveal>
 
@@ -32,7 +32,7 @@ export function Gallery() {
               <figure className="group relative h-full overflow-hidden rounded-[1.5rem] border border-primary/15 shadow-[var(--shadow-soft)]">
                 <img
                   src={item.src}
-                  alt={`VIORA ${item.label}`}
+                  alt={`VORA ${item.label}`}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />

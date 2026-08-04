@@ -31,7 +31,7 @@ export function Hero() {
           <Reveal delay={120}>
             <h1 className="mt-6 font-display text-5xl leading-[1.05] text-foreground sm:text-6xl lg:text-7xl">
               Glow Beautifully with{" "}
-              <span className="text-gradient-rose italic">VIORA</span>
+              <span className="text-gradient-rose italic">VORA</span>
             </h1>
           </Reveal>
 
@@ -88,7 +88,7 @@ export function Hero() {
             />
             <img
               src={heroModel}
-              alt="Model with radiant glowing skin beside VIORA luxury skincare bottles"
+              alt="Model with radiant glowing skin beside VORA luxury skincare bottles"
               width={1408}
               height={1600}
               className="relative w-full rounded-[2.5rem] object-cover shadow-[var(--shadow-lift)]"

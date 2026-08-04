@@ -8,7 +8,7 @@ import { Gallery } from "@/components/viora/Gallery";
 import { Newsletter } from "@/components/viora/Newsletter";
 import { Footer } from "@/components/viora/Footer";
 
-const title = "VIORA Cosmetics — Reveal Your Natural Glow";
+const title = "VORA Cosmetics — Reveal Your Natural Glow";
 const description =
   "Premium skincare and beauty products made with high-quality ingredients to enhance your natural beauty. Cruelty-free, dermatologist tested.";
 
@@ -46,7 +46,7 @@ function Index() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Brand",
-            name: "VIORA Cosmetics",
+            name: "VORA Cosmetics",
             slogan: "Reveal Your Natural Glow",
             description,
           }),
