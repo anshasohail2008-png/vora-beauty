@@ -7,6 +7,9 @@ import lipstick from "@/assets/product-lipstick.jpg";
 import eyeliner from "@/assets/product-eyeliner.jpg";
 import lipgloss from "@/assets/product-lipgloss.jpg";
 import foundation from "@/assets/product-foundation.jpg";
+import bronzer from "@/assets/product-bronzer.jpg";
+import contour from "@/assets/product-contour.jpg";
+import brushes from "@/assets/product-brushes.jpg";
 
 export type Product = {
   id: string;
