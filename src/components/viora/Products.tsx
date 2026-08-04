@@ -82,6 +82,25 @@ export function Products() {
                       {product.benefits}
                     </p>
 
+                    {product.shades && (
+                      <div className="mt-4">
+                        <p className="text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+                          Shades
+                        </p>
+                        <div className="mt-2 flex flex-wrap gap-2">
+                          {product.shades.map((shade) => (
+                            <span
+                              key={shade}
+                              className="rounded-full border border-border/70 bg-secondary/50 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-foreground/80"
+                            >
+                              {shade}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+
                     <div className="mt-5 flex items-baseline gap-3">
                       <span className="font-display text-2xl text-foreground">{product.newPrice}</span>
                       <span className="text-sm text-muted-foreground line-through">
