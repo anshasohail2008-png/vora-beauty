@@ -7,6 +7,9 @@ import lipstick from "@/assets/product-lipstick.jpg";
 import eyeliner from "@/assets/product-eyeliner.jpg";
 import lipgloss from "@/assets/product-lipgloss.jpg";
 import foundation from "@/assets/product-foundation.jpg";
+import bronzer from "@/assets/product-bronzer.jpg";
+import contour from "@/assets/product-contour.jpg";
+import brushes from "@/assets/product-brushes.jpg";
 
 export type Product = {
   id: string;
@@ -248,7 +251,83 @@ export const products: Product[] = [
     howToUse:
       "Shake well, dispense one pump and blend outward from the centre of the face with a brush, sponge or fingertips.",
   },
+  {
+    id: "bronzer",
+    name: "Sun-Kissed Bronzer",
+    image: bronzer,
+    description: "Silky matte bronzer with a soft rose gold blending brush.",
+    benefits: "Long-lasting · Highly pigmented · Smooth finish",
+    oldPrice: "$48.00",
+    newPrice: "$36.00",
+    badge: "New In",
+    category: "Makeup · Complexion",
+    volume: "9 g / 0.31 oz + brush",
+    shades: ["Light", "Medium", "Deep"],
+    longDescription:
+      "A finely milled matte bronzer that warms the complexion without a hint of orange. Each compact ships with a VORA bronzer brush so you can sculpt and diffuse in one step for a natural sun-kissed finish.",
+    highlights: [
+      "Includes a VORA bronzer brush",
+      "12-hour long-lasting matte finish",
+      "Buildable, highly pigmented powder",
+      "Suitable for all skin types",
+    ],
+    ingredients:
+      "Mica, Talc-free Silica, Zea Mays Starch, Iron Oxides, Tocopherol, Squalane.",
+    howToUse:
+      "Sweep the included brush along the hairline, cheekbones and jaw, then blend upward in soft circles.",
+  },
+  {
+    id: "contour",
+    name: "Sculpting Contour Palette",
+    image: contour,
+    description: "Four cool-toned sculpting shades with an angled contour brush.",
+    benefits: "Lightweight · Smooth finish · Suitable for all skin types",
+    oldPrice: "$58.00",
+    newPrice: "$42.00",
+    badge: "Bestseller",
+    category: "Makeup · Complexion",
+    volume: "4 × 3 g + brush",
+    shades: ["Fair", "Light", "Medium", "Deep"],
+    longDescription:
+      "A four-pan sculpting palette of cool, shadow-true tones that define cheekbones, nose and jawline naturally. The included VORA angled brush places colour precisely and blends it seamlessly into skin.",
+    highlights: [
+      "Includes a VORA angled contour brush",
+      "Cool undertones for realistic shadow",
+      "Lightweight, blendable powders",
+      "Layer for definition without harsh lines",
+    ],
+    ingredients:
+      "Mica, Silica, Boron Nitride, Kaolin, Iron Oxides, Tocopherol.",
+    howToUse:
+      "Pick the shade closest to your natural shadow, tap into the hollows of the cheeks, then blend up toward the ear.",
+  },
+  {
+    id: "brushes",
+    name: "Makeup Brush Set",
+    image: brushes,
+    description: "Seven-piece vegan brush set with rose gold ferrules.",
+    benefits: "Lightweight · Smooth finish · Suitable for all skin types",
+    oldPrice: "$95.00",
+    newPrice: "$69.00",
+    badge: "-27% Sale",
+    category: "Tools · Brushes",
+    volume: "7-piece set",
+    shades: ["Blush Pink"],
+    longDescription:
+      "Seven essential brushes — powder, foundation, angled contour, blush, blending, concealer and detail — with ultra-soft vegan bristles, blush pink handles and VORA-engraved rose gold ferrules. Everything you need for a full face in one set.",
+    highlights: [
+      "7 essentials for face and eyes",
+      "Soft vegan, cruelty-free bristles",
+      "Lightweight, balanced handles",
+      "Shed-resistant and easy to wash",
+    ],
+    ingredients:
+      "Synthetic vegan fibres, aluminium ferrule with rose gold finish, lacquered birch handle.",
+    howToUse:
+      "Use the flat brushes for base products and the fluffy brushes to buff and diffuse. Wash weekly with mild soap and air dry flat.",
+  },
 ];
+
 
 
 export function getProduct(id: string) {
