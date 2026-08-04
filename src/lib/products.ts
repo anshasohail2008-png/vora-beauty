@@ -124,7 +124,132 @@ export const products: Product[] = [
     howToUse:
       "Wiggle at the lash root and sweep upward. Build a second coat while the first is still wet.",
   },
+  {
+    id: "highlighter",
+    name: "Liquid Highlighter",
+    image: highlighter,
+    description: "A pearlescent liquid glow drop for a lit-from-within finish.",
+    benefits: "Lightweight · Highly pigmented · Smooth finish",
+    oldPrice: "$44.00",
+    newPrice: "$34.00",
+    badge: "New In",
+    category: "Makeup · Complexion",
+    volume: "15 ml / 0.5 fl oz",
+    shades: ["Silver", "Golden", "Pink", "Brown"],
+    longDescription:
+      "A silky liquid highlighter that melts into skin for a soft, wet-look sheen. Wear it alone on cheekbones or mix a drop into foundation for an all-over glow. Available in four flattering metallic shades.",
+    highlights: [
+      "Long-lasting luminous finish",
+      "Lightweight, never greasy",
+      "Highly pigmented — one drop is enough",
+      "Suitable for all skin types",
+    ],
+    ingredients:
+      "Aqua, Glycerin, Mica, Squalane, Sodium Hyaluronate, Tocopherol, Synthetic Fluorphlogopite.",
+    howToUse:
+      "Tap one or two drops onto cheekbones, brow bones and the bridge of the nose, then blend with fingertips.",
+  },
+  {
+    id: "lipstick",
+    name: "Satin Matte Lipstick",
+    image: lipstick,
+    description: "Creamy full-coverage colour in four statement shades.",
+    benefits: "Long-lasting · Highly pigmented · Hydrating",
+    oldPrice: "$38.00",
+    newPrice: "$28.00",
+    badge: "Bestseller",
+    category: "Makeup · Lips",
+    volume: "3.8 g / 0.13 oz",
+    shades: ["Pink", "Orange", "Red", "Purple"],
+    longDescription:
+      "A weightless satin-matte bullet that delivers full colour in one glide. Infused with shea butter and vitamin E so lips stay soft and comfortable through eight hours of wear.",
+    highlights: [
+      "8-hour long-lasting colour",
+      "Hydrating shea butter core",
+      "Highly pigmented, one-swipe coverage",
+      "Non-drying satin matte finish",
+    ],
+    ingredients:
+      "Ricinus Communis Seed Oil, Butyrospermum Parkii Butter, Candelilla Wax, Tocopherol, Iron Oxides, Mica.",
+    howToUse:
+      "Glide from the centre of the lips outward. Blot and reapply for a deeper matte finish.",
+  },
+  {
+    id: "eyeliner",
+    name: "Black Eyeliner",
+    image: eyeliner,
+    description: "Ultra-fine felt tip for precise, intense black lines.",
+    benefits: "Waterproof · Smudge-proof · Long-lasting",
+    oldPrice: "$32.00",
+    newPrice: "$24.00",
+    badge: "-25% Sale",
+    category: "Makeup · Eyes",
+    volume: "1.1 ml / 0.04 fl oz",
+    longDescription:
+      "A jet-black liquid liner with a flexible 0.1 mm felt tip for anything from a whisper-thin line to a bold graphic wing. The waterproof formula sets in seconds and stays put all day.",
+    highlights: [
+      "Intense one-stroke black pigment",
+      "Waterproof and smudge-proof",
+      "Ultra-fine 0.1 mm precision tip",
+      "Ophthalmologist tested, safe for sensitive eyes",
+    ],
+    ingredients:
+      "Aqua, Acrylates Copolymer, Black Iron Oxide (CI 77499), Butylene Glycol, Panthenol.",
+    howToUse:
+      "Rest the tip at the lash line and draw in short strokes toward the outer corner. Extend upward to wing.",
+  },
+  {
+    id: "lipgloss",
+    name: "Lip Gloss",
+    image: lipgloss,
+    description: "Mirror-shine gloss with a plumping hydration complex.",
+    benefits: "Hydrating · Non-sticky · Smooth finish",
+    oldPrice: "$30.00",
+    newPrice: "$22.00",
+    badge: "New In",
+    category: "Makeup · Lips",
+    volume: "5 ml / 0.17 fl oz",
+    shades: ["Nude", "Rose", "Berry", "Clear Shine"],
+    longDescription:
+      "A cushiony, high-shine gloss that never feels tacky. Hyaluronic spheres and peptides visibly plump while jojoba oil keeps lips smooth — wear it solo or layered over lipstick.",
+    highlights: [
+      "Glass-like mirror shine",
+      "Deeply hydrating, non-sticky texture",
+      "Visibly plumping peptide complex",
+      "Suitable for all skin types",
+    ],
+    ingredients:
+      "Polybutene, Jojoba Esters, Sodium Hyaluronate, Acetyl Hexapeptide-8, Tocopherol, Mica.",
+    howToUse:
+      "Sweep the doe-foot applicator across bare lips, or dab over lipstick for extra dimension.",
+  },
+  {
+    id: "foundation",
+    name: "Skin Perfecting Foundation",
+    image: foundation,
+    description: "Buildable medium coverage in a natural second-skin finish.",
+    benefits: "Long-lasting · Lightweight · Suitable for all skin types",
+    oldPrice: "$62.00",
+    newPrice: "$46.00",
+    badge: "Bestseller",
+    category: "Makeup · Complexion",
+    volume: "30 ml / 1.0 fl oz",
+    shades: ["Porcelain", "Ivory", "Sand", "Beige", "Honey", "Caramel", "Espresso"],
+    longDescription:
+      "A breathable serum-foundation that evens tone without masking skin. Niacinamide and glycerin hydrate while soft-focus pigments blur imperfections for 16 hours of natural, transfer-resistant wear across seven inclusive shades.",
+    highlights: [
+      "16-hour long-lasting wear",
+      "Lightweight, buildable medium coverage",
+      "Hydrating niacinamide formula",
+      "Seven shades for all skin tones",
+    ],
+    ingredients:
+      "Aqua, Glycerin, Niacinamide, Squalane, Sodium Hyaluronate, Titanium Dioxide, Iron Oxides.",
+    howToUse:
+      "Shake well, dispense one pump and blend outward from the centre of the face with a brush, sponge or fingertips.",
+  },
 ];
+
 
 export function getProduct(id: string) {
   return products.find((p) => p.id === id);
