@@ -45,10 +45,15 @@ export const SceneIntro: React.FC = () => {
             style={{
               position: "absolute",
               inset: 0,
-              background: `linear-gradient(100deg, rgba(255,255,255,0) ${sheen - 26}%, rgba(255,255,255,0.75) ${sheen}%, rgba(255,255,255,0) ${sheen + 26}%)`,
+              background: `linear-gradient(100deg, rgba(255,255,255,0) ${sheen - 26}%, rgba(255,255,255,0.85) ${sheen}%, rgba(255,255,255,0) ${sheen + 26}%)`,
+              WebkitMaskImage: `url(${logoUrl})`,
+              maskImage: `url(${logoUrl})`,
+              WebkitMaskSize: "100% 100%",
+              maskSize: "100% 100%",
               mixBlendMode: "overlay",
             }}
           />
+
         </div>
 
         <div style={{ transform: "translateY(-10px)" }}>
