@@ -4,6 +4,7 @@ import { Eyebrow, WordsReveal } from "../components/Type";
 import { PALETTE } from "../theme";
 
 const DURATION = 100;
+const logoUrl = staticFile("images/logo-t.png");
 
 export const SceneIntro: React.FC = () => {
   const frame = useCurrentFrame();
