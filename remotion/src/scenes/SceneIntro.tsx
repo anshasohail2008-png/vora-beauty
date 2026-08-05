@@ -40,7 +40,7 @@ export const SceneIntro: React.FC = () => {
             filter: `blur(${logoBlur}px)`,
           }}
         >
-          <Img src={staticFile("images/logo.png")} style={{ width: "100%" }} />
+          <Img src={staticFile("images/logo-t.png")} style={{ width: "100%" }} />
           <div
             style={{
               position: "absolute",

@@ -74,7 +74,7 @@ export const SceneElevate: React.FC = () => {
             transform: `scale(${interpolate(logoIn, [0, 1], [0.86, 1])})`,
           }}
         >
-          <Img src={staticFile("images/logo.png")} style={{ width: "100%" }} />
+          <Img src={staticFile("images/logo-t.png")} style={{ width: "100%" }} />
         </div>
         <Eyebrow text="Reveal Your Natural Glow" from={66} align="center" />
       </AbsoluteFill>
