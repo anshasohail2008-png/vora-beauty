@@ -38,7 +38,7 @@ export const SceneGlow: React.FC = () => {
       <AbsoluteFill
         style={{
           background:
-            "linear-gradient(90deg, rgba(255,248,242,0.94) 0%, rgba(255,248,242,0.78) 42%, rgba(255,248,242,0.08) 78%)",
+            "linear-gradient(90deg, rgba(255,248,242,0.98) 0%, rgba(255,248,242,0.95) 34%, rgba(255,248,242,0.55) 58%, rgba(255,248,242,0.05) 82%)",
         }}
       />
 
