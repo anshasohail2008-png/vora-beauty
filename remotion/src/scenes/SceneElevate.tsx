@@ -50,13 +50,14 @@ export const SceneElevate: React.FC = () => {
       <AbsoluteFill
         style={{
           background:
-            "linear-gradient(180deg, rgba(255,248,242,0.15) 0%, rgba(255,248,242,0.82) 42%, rgba(255,248,242,0.96) 100%)",
-          opacity: interpolate(frame, [14, 40], [0, 1], {
+            "radial-gradient(ellipse 62% 46% at 50% 50%, rgba(255,248,242,0.97) 0%, rgba(255,248,242,0.9) 55%, rgba(255,248,242,0.25) 100%)",
+          opacity: interpolate(frame, [4, 20], [0, 1], {
             extrapolateLeft: "clamp",
             extrapolateRight: "clamp",
           }),
         }}
       />
+
 
       <AbsoluteFill
         style={{
