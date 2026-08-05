@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Heart, Search, ShoppingBag, User } from "lucide-react";
 import { useShop } from "@/lib/shop-store";
+import logoAsset from "@/assets/logo.png.asset.json";
+
 
 const links = [
   { label: "Home", hash: "home" },
@@ -29,13 +31,14 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 sm:gap-3 sm:px-6 lg:gap-4">
-        <Link to="/" className="flex shrink-0 items-center gap-2">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-primary font-display text-lg text-primary-foreground">
-            V
-          </span>
-          <span className="font-display text-xl tracking-[0.28em] text-foreground sm:text-2xl">
-            VORA
-          </span>
+        <Link to="/" className="flex shrink-0 items-center">
+          <img
+            src={logoAsset.url}
+            alt="VORA Cosmetics"
+            width={120}
+            height={40}
+            className="h-10 w-auto object-contain"
+          />
         </Link>
 
         <nav
