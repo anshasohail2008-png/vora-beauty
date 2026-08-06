@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden pb-20 pt-32 sm:pt-40"
+      className="relative overflow-hidden pb-20 pt-16 sm:pt-20"
       style={{ background: "var(--gradient-veil)" }}
     >
       <div
