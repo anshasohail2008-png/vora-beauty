@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/viora/Header";
+import { PromoBanner } from "@/components/viora/PromoBanner";
 import { Hero } from "@/components/viora/Hero";
 import { Products } from "@/components/viora/Products";
 import { Features } from "@/components/viora/Features";
@@ -32,6 +33,7 @@ function Index() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
+        <PromoBanner />
         <Hero />
         <Products />
         <Features />

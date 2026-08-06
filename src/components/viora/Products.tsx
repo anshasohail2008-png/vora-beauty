@@ -25,8 +25,11 @@ export function Products() {
             const liked = wishlist.includes(product.id);
             return (
               <Reveal key={product.id} delay={i * 110}>
-                <article className="glass-card group flex h-full flex-col overflow-hidden rounded-[1.75rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-lift)]">
-                  <div className="relative overflow-hidden bg-secondary/40">
+                <article
+                  className="glass-card group flex h-full flex-col overflow-hidden rounded-[1.75rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-lift)]"
+                  style={product.tint ? { background: product.tint } : undefined}
+                >
+                  <div className="relative overflow-hidden bg-secondary/30">
                     <Link
                       to="/products/$productId"
                       params={{ productId: product.id }}

@@ -157,17 +157,17 @@
 :root {
   --radius: 1.25rem;
   --background: oklch(0.985 0.011 65);          /* #FFF8F2 beige */
-  --foreground: oklch(0.371 0 0);               /* #333333 */
+  --foreground: oklch(0.325 0 0);               /* deeper #2b2b2b */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.371 0 0);
+  --card-foreground: oklch(0.325 0 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.371 0 0);
+  --popover-foreground: oklch(0.325 0 0);
   --primary: oklch(0.752 0.072 65);             /* #D4A373 rose gold */
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.912 0.043 344);          /* #F8D7E8 soft pink */
   --secondary-foreground: oklch(0.371 0 0);
   --muted: oklch(0.965 0.014 60);
-  --muted-foreground: oklch(0.556 0.012 40);
+  --muted-foreground: oklch(0.505 0.012 40);
   --accent: oklch(0.912 0.043 344);
   --accent-foreground: oklch(0.371 0 0);
   --destructive: oklch(0.62 0.19 20);
