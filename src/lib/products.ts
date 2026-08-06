@@ -10,6 +10,8 @@ import foundation from "@/assets/product-foundation.jpg";
 import bronzer from "@/assets/product-bronzer.jpg";
 import contour from "@/assets/product-contour.jpg";
 import brushes from "@/assets/product-brushes.jpg";
+import blush from "@/assets/product-blush.jpg";
+import concealer from "@/assets/product-concealer.jpg";
 
 export type Product = {
   id: string;
@@ -325,6 +327,56 @@ export const products: Product[] = [
       "Synthetic vegan fibres, aluminium ferrule with rose gold finish, lacquered birch handle.",
     howToUse:
       "Use the flat brushes for base products and the fluffy brushes to buff and diffuse. Wash weekly with mild soap and air dry flat.",
+  },
+  {
+    id: "blush",
+    name: "Silk Glow Blush Palette",
+    image: blush,
+    description: "Four buildable blush shades in a rose gold compact.",
+    benefits: "Long-lasting · Highly pigmented · Smooth finish",
+    oldPrice: "$52.00",
+    newPrice: "$38.00",
+    badge: "New In",
+    category: "Makeup · Complexion",
+    volume: "4 × 3 g",
+    shades: ["Peach", "Rose", "Coral", "Berry"],
+    longDescription:
+      "A four-pan blush palette of silky, finely milled powders that melt into skin for a natural flush. Wear each shade alone or blend two for a custom tone that lasts all day without patchiness.",
+    highlights: [
+      "Four wearable shades in one compact",
+      "12-hour long-lasting colour",
+      "Highly pigmented, buildable powder",
+      "Suitable for all skin types",
+    ],
+    ingredients:
+      "Mica, Silica, Boron Nitride, Zea Mays Starch, Iron Oxides, Tocopherol, Squalane.",
+    howToUse:
+      "Tap a fluffy brush into your shade, sweep along the cheekbones and blend upward toward the temples.",
+  },
+  {
+    id: "concealer",
+    name: "Radiant Liquid Concealer",
+    image: concealer,
+    description: "Crease-proof coverage in six inclusive skin tone shades.",
+    benefits: "Lightweight · Hydrating · Long-lasting · Suitable for all skin types",
+    oldPrice: "$40.00",
+    newPrice: "$30.00",
+    badge: "Bestseller",
+    category: "Makeup · Complexion",
+    volume: "8 ml / 0.27 fl oz",
+    shades: ["Fair", "Light", "Light Medium", "Medium", "Tan", "Deep"],
+    longDescription:
+      "A hydrating liquid concealer that brightens under-eyes and covers blemishes without settling into fine lines. Peptides and hyaluronic acid keep skin comfortable through 16 hours of natural, crease-proof wear.",
+    highlights: [
+      "Six shades matched to skin tone",
+      "Brightens under-eyes instantly",
+      "Crease-proof, 16-hour wear",
+      "Hydrating peptide and hyaluronic formula",
+    ],
+    ingredients:
+      "Aqua, Glycerin, Sodium Hyaluronate, Niacinamide, Acetyl Hexapeptide-8, Titanium Dioxide, Iron Oxides.",
+    howToUse:
+      "Dot under the eyes or over blemishes and tap in with a fingertip or sponge. Set with powder if desired.",
   },
 ];
 
