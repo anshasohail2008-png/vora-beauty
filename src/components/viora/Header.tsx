@@ -29,14 +29,13 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center gap-2 px-4 sm:gap-3 sm:px-6 lg:gap-4">
-        <Link to="/" className="flex shrink-0 items-center">
-          <img
-            src={logoAsset.url}
-            alt="VORA Cosmetics"
-            width={120}
-            height={40}
-            className="h-10 w-auto object-contain"
-          />
+        <Link to="/" className="flex shrink-0 flex-col leading-none">
+          <span className="font-display text-2xl tracking-[0.22em] text-foreground sm:text-3xl">
+            VORA
+          </span>
+          <span className="text-[8px] uppercase tracking-[0.42em] text-primary sm:text-[9px]">
+            Cosmetics
+          </span>
         </Link>
 
         <nav
@@ -53,7 +52,15 @@ export function Header() {
               {link.label}
             </Link>
           ))}
+          <Link
+            to="/perfumes"
+            activeProps={{ className: "text-primary" }}
+            className="relative whitespace-nowrap text-xs uppercase tracking-[0.18em] text-foreground/80 transition-colors after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-primary after:transition-transform after:duration-300 hover:text-primary hover:after:origin-left hover:after:scale-x-100 sm:text-sm"
+          >
+            Perfume
+          </Link>
         </nav>
+
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <label className="hidden items-center gap-2 rounded-full border border-border/80 bg-card/70 px-3 py-2 md:flex">
