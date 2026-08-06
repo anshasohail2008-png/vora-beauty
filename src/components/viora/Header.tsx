@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Heart, Search, ShoppingBag, User } from "lucide-react";
 import { useShop } from "@/lib/shop-store";
-import logoAsset from "@/assets/logo.png.asset.json";
-
 
 const links = [
   { label: "Home", hash: "home" },
