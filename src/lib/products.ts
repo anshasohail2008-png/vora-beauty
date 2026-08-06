@@ -234,6 +234,7 @@ export const products: Product[] = [
     id: "foundation",
     name: "Skin Perfecting Foundation",
     image: foundation,
+    tint: "linear-gradient(160deg, oklch(0.945 0.03 70) 0%, oklch(0.965 0.02 60) 60%, oklch(1 0 0) 100%)",
     description: "Buildable medium coverage in a natural second-skin finish.",
     benefits: "Long-lasting · Lightweight · Suitable for all skin types",
     oldPrice: "$62.00",
