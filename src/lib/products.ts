@@ -29,6 +29,7 @@ export type Product = {
   ingredients: string;
   howToUse: string;
   shades?: string[];
+  tint?: string;
 };
 
 
