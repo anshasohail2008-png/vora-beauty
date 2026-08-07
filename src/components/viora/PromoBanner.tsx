@@ -10,7 +10,7 @@ export function PromoBanner() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="relative overflow-hidden rounded-[2rem] shadow-[var(--shadow-lift)]">
           <video
-            src={showcase.url}
+            src={showcaseSrc}
             autoPlay
             muted
             loop
