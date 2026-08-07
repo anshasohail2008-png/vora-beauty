@@ -134,6 +134,87 @@ export function Products() {
               </Reveal>
             );
           })}
+
+          <Reveal delay={products.length * 60}>
+            <article
+              className="glass-card group flex h-full flex-col overflow-hidden rounded-[1.75rem] transition-all duration-500 hover:-translate-y-2 hover:shadow-[var(--shadow-lift)]"
+              style={{
+                background:
+                  "linear-gradient(160deg, oklch(0.95 0.03 340) 0%, oklch(0.98 0.015 60) 60%, oklch(1 0 0) 100%)",
+              }}
+            >
+              <div className="relative overflow-hidden bg-secondary/30">
+                <Link to="/perfumes" aria-label="View the VORA perfume collection" className="block">
+                  <img
+                    src={perfumeCover}
+                    alt="VORA perfume collection"
+                    loading="lazy"
+                    width={912}
+                    height={912}
+                    className="aspect-square w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </Link>
+                <span className="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-primary-foreground">
+                  Collection
+                </span>
+              </div>
+
+              <div className="flex flex-1 flex-col p-6">
+                <p className="text-[10px] uppercase tracking-[0.32em] text-primary">VORA</p>
+                <h3 className="mt-2 font-display text-2xl leading-snug text-foreground">
+                  <Link to="/perfumes" className="transition-colors hover:text-primary">
+                    Perfume Collection
+                  </Link>
+                </h3>
+                <div className="mt-2 flex items-center gap-2">
+                  <span className="flex text-primary" aria-hidden>
+                    {Array.from({ length: 5 }).map((_, s) => (
+                      <Star key={s} className="h-3.5 w-3.5 fill-current" />
+                    ))}
+                  </span>
+                  <span className="text-xs text-muted-foreground">(5.0)</span>
+                </div>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  Seven signature fragrances in sculpted bottles — floral, rose, oud, vanilla,
+                  citrus, musk and jasmine.
+                </p>
+                <p className="mt-3 text-xs leading-relaxed text-foreground/70">
+                  Long-lasting · Eau de Parfum · Layerable
+                </p>
+
+                <div className="mt-4">
+                  <p className="text-[10px] uppercase tracking-[0.24em] text-muted-foreground">
+                    Fragrance families
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {perfumes.slice(0, 4).map((p) => (
+                      <span
+                        key={p.id}
+                        className="rounded-full border border-border/70 bg-secondary/50 px-3 py-1 text-[10px] uppercase tracking-[0.12em] text-foreground/80"
+                      >
+                        {p.family}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-5 flex items-baseline gap-3">
+                  <span className="font-display text-2xl text-foreground">From $88.00</span>
+                  <span className="text-sm text-muted-foreground">50 ml</span>
+                </div>
+
+                <div className="mt-6 grid gap-2">
+                  <Link
+                    to="/perfumes"
+                    className="rounded-full px-5 py-3 text-center text-xs uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:-translate-y-0.5"
+                    style={{ background: "var(--gradient-rose)" }}
+                  >
+                    View Details
+                  </Link>
+                </div>
+              </div>
+            </article>
+          </Reveal>
         </div>
       </div>
     </section>
