@@ -96,11 +96,12 @@ function PerfumesPage() {
 
                     <button
                       type="button"
+                      onClick={() => addToCart(`perfume-${perfume.id}`)}
                       className="mt-6 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:-translate-y-0.5"
                       style={{ background: "var(--gradient-rose)" }}
                     >
                       <ShoppingBag className="h-4 w-4" aria-hidden />
-                      Shop Now
+                      Add to Cart
                     </button>
                   </div>
                 </article>
