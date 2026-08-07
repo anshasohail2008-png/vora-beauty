@@ -4,6 +4,7 @@ import { Header } from "@/components/viora/Header";
 import { Footer } from "@/components/viora/Footer";
 import { Reveal } from "@/components/viora/Reveal";
 import { perfumes } from "@/lib/perfumes";
+import { useShop } from "@/lib/shop-store";
 
 const title = "Perfume Collection — VORA Beauty";
 const description =
