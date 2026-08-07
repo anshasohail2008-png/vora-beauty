@@ -1,4 +1,4 @@
-import showcase from "@/assets/vora-showcase.mp4.asset.json";
+const showcaseSrc = "/videos/vora-showcase.mp4";
 
 export function PromoBanner() {
   return (
