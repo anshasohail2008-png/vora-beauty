@@ -4,6 +4,7 @@ import { Header } from "@/components/viora/Header";
 import { Footer } from "@/components/viora/Footer";
 import { Reveal } from "@/components/viora/Reveal";
 import { perfumes } from "@/lib/perfumes";
+import { useShop } from "@/lib/shop-store";
 
 const title = "Perfume Collection — VORA Beauty";
 const description =
@@ -24,7 +25,11 @@ export const Route = createFileRoute("/perfumes")({
 });
 
 function PerfumesPage() {
+  const { addToCart } = useShop();
+
   return (
+
+
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-28 pb-24">
@@ -96,11 +101,12 @@ function PerfumesPage() {
 
                     <button
                       type="button"
+                      onClick={() => addToCart(`perfume-${perfume.id}`)}
                       className="mt-6 inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-all duration-300 hover:-translate-y-0.5"
                       style={{ background: "var(--gradient-rose)" }}
                     >
                       <ShoppingBag className="h-4 w-4" aria-hidden />
-                      Shop Now
+                      Add to Cart
                     </button>
                   </div>
                 </article>
