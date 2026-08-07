@@ -2,6 +2,8 @@ import { Heart, ShoppingBag, Star } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { Reveal } from "./Reveal";
 import { products } from "@/lib/products";
+import { perfumes } from "@/lib/perfumes";
+import perfumeCover from "@/assets/perfume-rose.jpg";
 import { useShop } from "@/lib/shop-store";
 
 export function Products() {
