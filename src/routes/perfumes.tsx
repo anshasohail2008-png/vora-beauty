@@ -24,7 +24,9 @@ export const Route = createFileRoute("/perfumes")({
 });
 
 function PerfumesPage() {
-  return (
+  const { addToCart } = useShop();
+
+
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-28 pb-24">
